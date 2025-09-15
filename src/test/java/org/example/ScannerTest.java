@@ -224,10 +224,10 @@ class ScannerTest {
         Scanner.TOKEN testA = scanObj.scan();
         assertEquals(Scanner.TOKEN.SCANEOF, testA);
     }
-    //Made a test to check input with no spaces
+    //Made a test to check input with unique spacing
     @Test
     public void test9() throws IOException {
-        String s = "Num100+10!=110";
+        String s = " Num100+10!=110 ";
         StringReader sr = new StringReader(s);
         Scanner scanObj = new Scanner(new PushbackReader(sr));
         Scanner.TOKEN testA = scanObj.scan();

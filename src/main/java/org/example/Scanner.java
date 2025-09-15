@@ -17,8 +17,6 @@ public class Scanner {
 
     List<String> reservedWords;
 
-
-
     public Scanner(PushbackReader pbr) {
         this.pbr = pbr;
         reservedWords = new ArrayList<>();
@@ -32,7 +30,6 @@ public class Scanner {
         reservedWords.add("do");
         reservedWords.add("while");
         reservedWords.add("endwhile");
-
     }
 
     StringBuilder tokenBuffer = new StringBuilder();
@@ -63,9 +60,6 @@ public class Scanner {
                 if (reservedWords.contains(tokenBuffer.toString())) {
 
                     return TOKEN.valueOf(tokenBuffer.toString().toUpperCase());
-
-
-
                 }
                 else {
 
@@ -82,9 +76,11 @@ public class Scanner {
             } else if (c == '+') {
 
                 return TOKEN.PLUS;
+
             } else if (c == '=') {
 
                 return TOKEN.EQUALS;
+
             } else if (Character.isDigit((char) c)) {
                 c = pbr.read();
 
