@@ -10,7 +10,7 @@ public class Scanner {
     enum TOKEN {
         SCANEOF, ID, INTLITERAL, VAR, WRITE, INIT, EQUALS,
         NOTEQUALS, IF, THEN, ENDIF, WHILE, DO,
-        ENDWHILE, CALCULATE, PLUS;
+        ENDWHILE, CALCULATE, PLUS
     }
 
     PushbackReader pbr;
@@ -21,7 +21,7 @@ public class Scanner {
 
     public Scanner(PushbackReader pbr) {
         this.pbr = pbr;
-        reservedWords = new ArrayList<String>();
+        reservedWords = new ArrayList<>();
         reservedWords.add("var");
         reservedWords.add("write");
         reservedWords.add("init");
